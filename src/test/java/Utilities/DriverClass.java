@@ -1,9 +1,13 @@
 package Utilities;
 
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
+=======
+import TestCases._011_PageElements;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -20,10 +24,12 @@ public class DriverClass {
     public static WebDriver driver;
     public static WebDriverWait wait;
     public static Actions actions;
+    _011_PageElements pge = new _011_PageElements();
+
 
     @BeforeClass(alwaysRun = true)
     @Parameters("browserName")
-    public void createDriver(@Optional("chrome") String browser){
+    public void createDriver(@Optional("chrome") String browser) {
         switch (browser.toLowerCase()) {
 
             case "chrome":
@@ -49,12 +55,13 @@ public class DriverClass {
     }
 
     @AfterClass(alwaysRun = true)
-    public void quitDriver(){
+    public void quitDriver() {
         driver.quit();
         closePreviousDrivers();
     }
 
-    public void closePreviousDrivers(){
+
+    public void closePreviousDrivers() {
         try {
             if (Platform.getCurrent().is(Platform.MAC)) {
                 Runtime.getRuntime().exec("pkill -f chromedriver");
