@@ -10,7 +10,8 @@ import org.testng.annotations.Test;
 import javax.swing.*;
 import static Utilities.DriverClass.*;
 
-public class _02_US402 extends DriverClass {   //As a user, I want to be able to log into the system
+public class _02_US402 extends DriverClass {
+    //As a user, I want to be able to log into the system
     // so that I can benefit from the application's features.
 
     @Test
