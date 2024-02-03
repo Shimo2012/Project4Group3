@@ -12,6 +12,7 @@ public class _07_US407 extends DriverClass {
     void myAccountTest() throws AWTException, InterruptedException {
 
         Elements_Locators elements = new Elements_Locators();
+        driver.get("https://demo.openmrs.org/");
         elements.usernameInput.sendKeys("admin");
         elements.passwordInput.sendKeys("Admin123");
         int randomIndex = (int) (Math.random() * elements.locationList.size());
