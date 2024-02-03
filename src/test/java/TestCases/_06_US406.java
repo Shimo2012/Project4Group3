@@ -39,12 +39,12 @@ public class _06_US406 extends DriverClass {
         elements.locationList.get(randomIndex).click();
         elements.loginButton.click();
         elements.findPatientRecord.click();
-        elements.searchInput.sendKeys("100HTR");
-
+        elements.searchInput.sendKeys("Martha Steel");
         Robot robot = new Robot();
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
-
+        wait.until(ExpectedConditions.visibilityOf(elements.patientsNameList));
+        elements.patientsNameList.click();
         Assert.assertTrue(elements.medicalHistory.getText().toUpperCase(Locale.ROOT).contains("DIAGNOSES"));
 
 

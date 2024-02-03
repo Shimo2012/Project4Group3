@@ -56,6 +56,17 @@ public class Elements_Locators {
     @FindBy(css = "tbody[role=\"alert\"]")
     public WebElement nonExistentPatient;
 
+    @FindBy(id = "org.openmrs.module.coreapps.deletePatient")
+    public WebElement deletePatient;
+
+    @FindBy(id = "delete-reason")
+    public WebElement deleteReason;
+
+    @FindBy(xpath = "(//button[@class=\"confirm right\"])[6]")
+    public WebElement confirmButtonForDeletion;
+
+    @FindBy(css = "tbody[role=\"alert\"]")
+    public WebElement patientsNameList;
 
 
 }
