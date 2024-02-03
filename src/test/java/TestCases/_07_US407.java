@@ -18,7 +18,7 @@ public class _07_US407 extends DriverClass {
         elements.locationList.get(randomIndex).click();
         elements.loginButton.click();
         elements.findPatientRecord.click();
-        elements.searchInput.sendKeys("Martha Steel");
+        elements.searchInput.sendKeys("Batch Ten");
         Robot robot = new Robot();
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
