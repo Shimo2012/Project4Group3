@@ -32,7 +32,7 @@ public class _06_US406 extends DriverClass {
     @Test(dataProvider = "loginData")
     void patientSearchTest(String username, String password) throws InterruptedException, AWTException {
         Elements_Locators elements = new Elements_Locators();
-
+        driver.get("https://demo.openmrs.org/");
         elements.usernameInput.sendKeys(username);
         elements.passwordInput.sendKeys(password);
         int randomIndex = (int) (Math.random() * elements.locationList.size());
@@ -53,6 +53,7 @@ public class _06_US406 extends DriverClass {
     @Test(dataProvider = "loginData")
     void nonExistentPatientSearchTest(String username, String password) throws InterruptedException, AWTException {
         Elements_Locators elements = new Elements_Locators();
+        driver.get("https://demo.openmrs.org/");
         elements.usernameInput.sendKeys(username);
         elements.passwordInput.sendKeys(password);
         int randomIndex = (int) (Math.random() * elements.locationList.size());

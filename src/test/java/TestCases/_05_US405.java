@@ -28,7 +28,7 @@ public class _05_US405 extends DriverClass {
     @Test
     void myAccountTest() {
         Elements_Locators elements = new Elements_Locators();
-
+        driver.get("https://demo.openmrs.org/");
         elements.usernameInput.sendKeys("admin");
         elements.passwordInput.sendKeys("Admin123");
         int randomIndex = (int) (Math.random() * elements.locationList.size());
