@@ -39,7 +39,7 @@ public class DriverClass {
                 driver = new EdgeDriver();
                 break;
         }
-        driver.get("https://demo.openmrs.org/");
+        driver.get("https://openmrs.org/");
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
