@@ -17,7 +17,7 @@ public class _02_US402 extends DriverClass {
     @Test
     void login() {
 
-        actions.click(driver.findElement(By.xpath("//*[@id=\"zak-masthead\"]/div/div[2]/div/div/div[2]/div[2]/div"))).perform();
+        actions.click(driver.findElement(By.className("zak-button"))).perform();
 
 
         actions.click(driver.findElement(By.linkText("Enter the OpenMRS 3 Demo"))).perform();
