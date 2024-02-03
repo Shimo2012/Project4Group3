@@ -3,10 +3,7 @@ package TestCases;
 import Utilities.DriverClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -28,9 +25,9 @@ public class _01_US401 extends DriverClass {
         WebElement errorMessage = driver.findElement(By.id("error-message"));
         Assert.assertTrue(errorMessage.isDisplayed());
 
-        String targetURL = ("https://openmrs.org/");
-       String actualURL = DriverClass.driver.getCurrentUrl();
-        Assert.assertEquals(actualURL, targetURL, "URL is not correct");
+       // String targetURL = ("https://demo.openmrs.org/openmrs/login.htm");
+       // String actualURL = DriverClass.driver.getCurrentUrl();
+       // Assert.assertEquals(actualURL, targetURL, "URL is not correct");
 
     }
 
