@@ -1,5 +1,11 @@
 package Utilities;
 
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
+=======
 import TestCases._011_PageElements;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,10 +14,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -68,4 +72,17 @@ public class DriverClass {
             throw new RuntimeException(e);
         }
     }
+    public static final Logger logger = LogManager.getLogger();
+    @BeforeMethod(alwaysRun = true)
+    public void logsBeforeTest(ITestResult testResult) {
+
+        logger.info(testResult.getMethod().getMethodName()+ "test has started");
+    }
+
+    @AfterMethod(alwaysRun = true)
+    public void logsAfterTest(ITestResult testResult) {
+
+        logger.info(testResult.getMethod().getMethodName()+ "test has started"+testResult.getStatus());
+    }
 }
+
