@@ -28,9 +28,9 @@ public class _01_US401 extends DriverClass {
         WebElement errorMessage = driver.findElement(By.id("error-message"));
         Assert.assertTrue(errorMessage.isDisplayed());
 
-    //    String targetURL = ("https://openmrs.org/");
-      //  String actualURL = DriverClass.driver.getCurrentUrl();
-     //   Assert.assertEquals(actualURL, targetURL, "URL is not correct");
+        String targetURL = ("https://openmrs.org/");
+       String actualURL = DriverClass.driver.getCurrentUrl();
+        Assert.assertEquals(actualURL, targetURL, "URL is not correct");
 
     }
 
